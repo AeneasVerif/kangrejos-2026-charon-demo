@@ -1,6 +1,6 @@
 {
   inputs = {
-    charon.url = "github:AeneasVerif/charon/b2a7a167215b84bd29a230cda07064f02b867441";
+    charon.url = "github:AeneasVerif/charon";
     flake-utils.follows = "charon/flake-utils";
     nixpkgs.follows = "charon/nixpkgs";
   };

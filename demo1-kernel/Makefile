@@ -15,12 +15,11 @@ export CHARON_BIN CHARON_OPTIONS CHARON_OUTPUT CHARON_RUSTC
 
 .DEFAULT_GOAL := demo
 
-.PHONY: demo kernel.llbc check clean
+.PHONY: demo check clean
 demo: kernel.pretty
 	grep -A24 'Full name: bindings::bindings_raw::list_head$$' $<
 
 kernel.llbc: build/.config rustc-wrapper
-	rm -f $(BUILD)/rust/kernel.o $(BUILD)/rust/libkernel.rmeta $(BUILD)/rust/.kernel.o.cmd
 	$(KBUILD) rust/kernel.o
 
 kernel.pretty: kernel.llbc

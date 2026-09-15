@@ -9,4 +9,5 @@ input.llbc: input.rs
 	$(CHARON) rustc --format=json --dest-file=$@ --extract-opaque-bodies --monomorphize -- $< --crate-type=rlib --edition=2021
 
 clean:
+	rm -f output.py
 	rm -f input.llbc

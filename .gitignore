@@ -2,3 +2,4 @@ bin
 target
 backups
 *.llbc
+output.py

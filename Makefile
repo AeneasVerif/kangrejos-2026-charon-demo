@@ -1,4 +1,6 @@
-.PHONY: demo1 demo2 demo3 clean
+.PHONY: all demo1 demo2 demo3 clean
+
+all: demo1 demo2 demo3
 
 demo1:
 	cd ./demo1-kernel && $(MAKE)
