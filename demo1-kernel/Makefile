@@ -39,4 +39,5 @@ check:
 
 clean:
 	$(KBUILD) clean
+	rm -rf $(BUILD)
 	rm -f $(CHARON_OUTPUT) $(CHARON_PRETTY)

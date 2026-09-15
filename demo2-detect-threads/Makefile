@@ -1,12 +1,12 @@
-CHARON ?= ../bin/charon
+CHARON ?= $(CURDIR)/../bin/charon
 .DEFAULT_GOAL := demo
 
-.PHONY: demo clean
-demo: input.llbc
-	./main.rs $<
+.PHONY: demo clean run-charon
+demo: run-charon
+	./main.rs use-threads/use_threads.llbc
 
-input.llbc: input.rs
-	$(CHARON) rustc --format=json --dest-file=$@ -- $< --crate-type=rlib --edition=2021
+run-charon:
+	cd use-threads && $(CHARON) cargo
 
 clean:
-	rm -f input.llbc
+	rm -f detect-threads/*.llbc
