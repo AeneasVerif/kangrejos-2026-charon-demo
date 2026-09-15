@@ -1,11 +1,15 @@
-#!/usr/bin/env -S cargo +nightly -Zscript
+#!/usr/bin/env -S cargo -Zscript
 ---
 [package]
 edition = "2024"
 
 [dependencies]
 anyhow = "1"
-charon = { git = "https://github.com/AeneasVerif/charon", default-features = false }
+charon = {
+    path = "/home/nadrieril/wip/work/charon/charon",
+    # git = "https://github.com/AeneasVerif/charon",
+    default-features = false
+}
 indoc = "2"
 itertools = "0.13"
 ---

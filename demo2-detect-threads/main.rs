@@ -5,7 +5,11 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1"
-charon = { git = "https://github.com/AeneasVerif/charon", default-features = false }
+charon = {
+    path = "/home/nadrieril/wip/work/charon/charon",
+    # git = "https://github.com/AeneasVerif/charon",
+    default-features = false
+}
 ---
 
 //! This example implements a small linter that detects whether a crate uses threads by catching
@@ -26,7 +30,7 @@ fn main() -> Result<()> {
     let krate: TranslatedCrate = charon_lib::deserialize_llbc(llbc_path.as_ref())?;
 
     // A pattern that detects the `thread::spawn` function we care about.
-    let thread_spawn = NamePattern::parse("std::thread::_::spawn").unwrap();
+    let thread_spawn = NamePattern::parse("std::thread::functions::spawn").unwrap();
 
     // Iterate over all the functions in the crate (including dependencies) to find calls to
     // `thread::spawn`.

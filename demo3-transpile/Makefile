@@ -1,4 +1,4 @@
-CHARON ?= ../bin/charon
+CHARON ?= charon
 .DEFAULT_GOAL := demo
 
 .PHONY: demo clean

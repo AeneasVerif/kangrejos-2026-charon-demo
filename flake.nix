@@ -36,6 +36,7 @@
             pkgs.python3
             pkgs.rust-bindgen-unwrapped
             pkgs.zlib
+            charon.packages.${system}.default
           ];
 
           CHARON_TOOLCHAIN_IS_IN_PATH = 1;

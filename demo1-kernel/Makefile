@@ -1,9 +1,8 @@
 LINUX ?= ../linux
-CHARON_BIN ?= ../bin/charon
+CHARON_BIN ?= charon
 CHARON_OPTIONS ?=
 
 LINUX := $(abspath $(LINUX))
-CHARON_BIN := $(abspath $(CHARON_BIN))
 CHARON_RUSTC ?= $(shell $(CHARON_BIN) toolchain-path)/bin/rustc
 CHARON_OUTPUT := $(CURDIR)/kernel.llbc
 CHARON_PRETTY := $(CURDIR)/kernel.pretty
@@ -25,7 +24,7 @@ kernel.llbc: build/.config rustc-wrapper
 	$(KBUILD) rust/kernel.o
 
 kernel.pretty: kernel.llbc
-	$(CHARON_BIN) pretty-print --include-layouts $< > $@
+	$(CHARON_BIN) pretty-print --include-layouts --hide-storage-statements $< > $@
 
 build/.config:
 	mkdir -p $(BUILD)

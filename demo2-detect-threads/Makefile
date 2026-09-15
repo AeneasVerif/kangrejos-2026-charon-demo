@@ -1,4 +1,4 @@
-CHARON ?= $(CURDIR)/../bin/charon
+CHARON ?= charon
 .DEFAULT_GOAL := demo
 
 .PHONY: demo clean run-charon

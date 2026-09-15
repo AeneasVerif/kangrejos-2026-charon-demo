@@ -1,6 +1,3 @@
-CHARON_DIR ?= "$(HOME)/wip/work/charon"
-CHARON_BIN ?= "$(PWD)/bin/charon"
-
 demo1:
 	cd ./demo1-kernel && $(MAKE)
 

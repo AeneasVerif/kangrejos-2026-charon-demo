@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "detect-threads"
+name = "use-threads"
 version = "0.1.0"
