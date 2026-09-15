@@ -9,4 +9,4 @@ run-charon:
 	cd use-threads && $(CHARON) cargo
 
 clean:
-	rm -f detect-threads/*.llbc
+	rm -f use-threads/*.llbc
