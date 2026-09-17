@@ -6,8 +6,8 @@ edition = "2024"
 [dependencies]
 anyhow = "1"
 charon = {
-    path = "/home/nadrieril/wip/work/charon/charon",
-    # git = "https://github.com/AeneasVerif/charon",
+    git = "https://github.com/AeneasVerif/charon",
+    rev = "779d2657719174a57fc8e76b8e2c917565f01be1",
     default-features = false
 }
 indoc = "2"
