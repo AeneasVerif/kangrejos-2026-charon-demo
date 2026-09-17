@@ -2,4 +2,5 @@ bin
 target
 backups
 *.llbc
+*.llbc.postcard
 output.py
